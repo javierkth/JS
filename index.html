@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vector Plotting</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+  <header>
+    <h2>Vector Input and Plot</h2>
+  </header>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item grid-item-1-3">
+        <div class="input-container">
+            <label for="vectorU" class="input-label blue">
+                <span class="vector-symbol">u</span> (x,y,z):
+              </label>              
+            <input type="text" id="vectorU" value="1,0,0" />
+          </div>
+        <div class="input-container">
+            <label class="input-label blueO"><span class="vector-symbol">u</span>(x,y,z):</label>
+            <input type="text" id="originU" value="0,0,0" />
+          </div>
+          <div class="input-container">
+            <label for="vectorV" class="input-label red">
+                <span class="vector-symbol">v</span> (x,y,z):
+              </label>
+              <input type="text" id="vectorV" value="0,1,0" />
+          </div>
+          <div class="input-container">
+            <label class="input-label redO"><span>v</span>(x,y,z):</label>
+            <input type="text" id="originV" value="0,0,0" /><br />
+          </div>
+          <div class="input-container">
+            <label for="vectorW" class="input-label green">
+                <span class="vector-symbol">w</span> (x,y,z):
+              </label>
+              <input type="text" id="vectorW" value="0,0,1" />
+          </div>
+          <div class="input-container">
+            <label class="input-label greenO"><span class="vector-symbol">w</span>(x,y,z):</label>
+            <input type="text" id="originW" value="0,0,0" /><br />
+          </div>
+      </div>
+        <div id="plot3D" class="grid-item grid-item-2-3 d3"></div>
+        <div id="plotXY" class="row2 grid-item grid-item-1-of-3"></div>
+        <div id="plotYZ" class="row2 grid-item grid-item-1-of-3"></div>
+        <div id="plotZX" class="row2 grid-item grid-item-1-of-3"></div>
+</div>
+</div>
+    <script src="script.js"></script>
+  </body>
+</html>
