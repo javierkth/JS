@@ -1,62 +1,131 @@
+* {
+    box-sizing: border-box;
+  }
 body {
-    padding: 10px;
-    background-color: #333; /* Dark background for the entire page */
-    color: #fff; /* White text color for better readability */
-    font-family: Arial, sans-serif; /* Clean font style */
+  padding: 10px;
+  background-color: #333; /* Dark background for the entire page */
+  color: #fff; /* White text color for better readability */
+  font-family: Arial, sans-serif; /* Clean font style */
 }
-
 input[type="text"] {
-    width: 95%; /* Full width with some margin */
-    padding: 8px; /* Comfortable padding inside the input fields */
-    background-color: #444; /* Darker background for input fields */
-    color: #fff; /* White text color for input fields */
-    border: 1px solid #555; /* Subtle border for inputs */
-    border-radius: 4px; /* Rounded corners for the input fields */
-    box-sizing: border-box; /* Correct box sizing */
-    font-size: 1em; /* Standard font size */
+  width: 95%; /* Full width with some margin */
+  padding: 8px; /* Comfortable padding inside the input fields */
+  background-color: #444; /* Darker background for input fields */
+  color: #fff; /* White text color for input fields */
+  border: 1px solid #555; /* Subtle border for inputs */
+  border-radius: 4px; /* Rounded corners for the input fields */
+  box-sizing: border-box; /* Correct box sizing */
+  font-size: 1em; /* Standard font size */
 }
 
 label {
-    color: #fff; /* White color for labels */
-    margin-bottom: 5px; /* Space between label and input */
-    display: block; /* Each label on a new line */
-    font-weight: bold; /* Bold text for labels */
+  color: #fff; /* White color for labels */
+  margin-bottom: 5px; /* Space between label and input */
+  display: block; /* Each label on a new line */
+  font-weight: bold; /* Bold text for labels */
 }
 
 /* Grid container and item styles */
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr); /* 12-column layout */
-    grid-gap: 10px; /* Space between grid items */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12-column layout */
+  grid-gap: 10px; /* Space between grid items */
 }
 
 .grid-item {
-    border: 1px solid #555; /* Subtle border for grid items */
-    padding: 10px; /* Padding inside grid items */
+  border: 1px solid #555; /* Subtle border for grid items */
+  padding: 10px; /* Padding inside grid items */
 }
 
 /* Specific grid item styles */
-.grid-item-1-3 { grid-column: span 2; }
-.grid-item-2-3 { grid-column: span 10; }
-.grid-item-1-of-3 { grid-column: span 4; }
+.grid-item-1-3 {
+  grid-column: span 2;
+}
+.grid-item-2-3 {
+  grid-column: span 10;
+}
+.grid-item-1-of-3 {
+  grid-column: span 4;
+}
 
-.d3 { min-height: 50vh; }
-.row2 { min-height: 40vh; }
+.d3 {
+  min-height: 50vh;
+}
+.row2 {
+  min-height: 40vh;
+}
 
 /* Vector symbol styling */
 .vector-symbol::after {
-    content: '\2192'; /* Unicode for rightwards arrow */
-    font-size: 0.5em; /* Adjust size of the arrow */
-    position: absolute;
-    top: -1px; /* Position the arrow above the letter */
-    left: 50%; /* Center the arrow horizontally */
-    transform: translateX(-50%); /* Adjust horizontal position */
+  content: "\2192"; /* Unicode for rightwards arrow */
+  font-size: 0.5em; /* Adjust size of the arrow */
+  position: absolute;
+  top: -1px; /* Position the arrow above the letter */
+  left: 50%; /* Center the arrow horizontally */
+  transform: translateX(-50%); /* Adjust horizontal position */
 }
 
 /* Color classes */
-.blue { color: #276592; }
-.blueO { color: #276592b4; }
-.red { color: #e67517; }
-.redO { color: #e6741796; }
-.green { color: #2f832f; }
-.greenO { color: #2f832fa6; }
+.blue {
+  color: #276592;
+}
+.blueO {
+  color: #276592b4;
+}
+.red {
+  color: #e67517;
+}
+.redO {
+  color: #e6741796;
+}
+.green {
+  color: #2f832f;
+}
+.greenO {
+  color: #2f832fa6;
+}
+
+@media (max-width: 600px) {
+.main{
+    position: initial;
+}
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr); /* Adjusted for smaller screens */
+  }
+
+  /* Adjust grid item spans for smaller screens */
+  .grid-item-1-3,
+  
+  .grid-item-2-3,
+  .grid-item-1-of-3 {
+    grid-column: span 4; /* Full width on small screens */
+  }
+  input[type="text"] {
+    width: 100%; /* Full width on small screens */
+  }
+
+  .d3,
+  .row2 {
+    min-height: 30vh; /* Adjust height for smaller screens */
+  }
+  .form-container {
+    display: grid;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: stretch;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 0;
+    top: 0;
+    z-index: 1000;
+    padding: 10px;
+    width: 95vw;
+  }
+  .menu-item {
+    grid-column: span 1;
+  }
+  .three5{
+height: 35vh;
+  }
+}
