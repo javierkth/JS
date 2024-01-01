@@ -1,0 +1,13 @@
+{
+    "name": "linear-algebra-plotter",
+    "version": "0.1.0",
+    "description": "A simple Node.js app",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "plotly": "^1.0.6"
+    }
+}
